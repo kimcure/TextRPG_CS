@@ -19,7 +19,7 @@ public class Character
         AttackPower = attackpower;
     }
 
-    public void Attack(Character target)
+    public virtual void Attack(Character target)
     {
         Console.WriteLine($"{Name}이/가 {target.Name}을/를 공격합니다!");
         target.TakeDamage(AttackPower);
@@ -27,7 +27,6 @@ public class Character
 
     public void TakeDamage(int damage)
     {
-        damage -= Defense;
         Health -= damage;
 
         Console.WriteLine(Name + "의 남은 체력: " + Health);

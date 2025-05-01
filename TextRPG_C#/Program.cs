@@ -4,10 +4,12 @@ public class Program
 {
     static void Main()
     {
-        Character player = new Character("Name", 100, 10, 20);
-        Character enemy = new Character("Name2", 100, 15, 15);
+        Item player = new Item("Name", 100, 10, 20);
+        Orc orc = new Orc("오크", 50, 5, 30);
 
-        player.Attack(enemy);
-        enemy.Attack(player);
+        player.Attack(orc);
+        orc.Attack(player);
+
+        player.Heal();
     }
 }
