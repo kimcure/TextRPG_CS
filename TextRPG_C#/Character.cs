@@ -22,18 +22,18 @@ public class Character
     public virtual void Attack(Character target)
     {
         Console.WriteLine($"{Name}이/가 {target.Name}을/를 공격합니다!");
-        target.TakeDamage(AttackPower);
+        target.TakeDamage(AttackPower - target.Defense);
     }
 
     public void TakeDamage(int damage)
     {
         Health -= damage;
 
-        Console.WriteLine(Name + "의 남은 체력: " + Health);
-
         if (Health < 0)
         {
             Health = 0;
         }
+
+        Console.WriteLine(Name + "의 남은 체력: " + Health);
     }
 }
