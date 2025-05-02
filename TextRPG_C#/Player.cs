@@ -14,6 +14,12 @@ public class Player : Character
         Lv = lv;
     }
 
+    public void PowerUpSkill()
+    {
+        AttackPower *= 2;
+        Console.WriteLine("파워 업 스킬을 사용하여 공격력이 2배가 됩니다!");
+    }
+
     public void AttackSkill(Character target)
     {
         int damage = (AttackPower - target.Defense) * 3;
@@ -23,9 +29,20 @@ public class Player : Character
         target.TakeDamage(damage);
     }
 
+    public void DefenseSkill()
+    {
+        Console.WriteLine("공격을 1회 방어했습니다.");
+    }
+
     public void LvUp()
     {
         Lv++;
         Console.WriteLine("레벨 업을 했습니다! 현재 레벨: " + Lv);
+    }
+
+    public void Die()
+    {
+        Console.WriteLine("캐릭터가 사망했습니다...");
+        Environment.Exit(0);
     }
 }

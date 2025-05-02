@@ -36,4 +36,7 @@ public class Character
 
         Console.WriteLine(Name + "의 남은 체력: " + Health);
     }
+
+    public virtual void EnemyDie(Player target)
+    { }
 }

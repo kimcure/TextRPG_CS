@@ -13,13 +13,13 @@ public class Item
 
     public void Heal(Player target)
     {
-        target.Health += 20;
-        Console.WriteLine("체력이 20 회복되었습니다! 남은 체력: " + target.Health);
+        target.Health += 60;
+        Console.WriteLine("체력이 60 회복되었습니다! 남은 체력: " + target.Health);
     }
 
     public void AttackPowerUp(Player target)
     {
         target.AttackPower += 20;
-        Console.WriteLine("공격력이 20 증가했습니다!");
+        Console.WriteLine("공격력이 1회 20 증가합니다!");
     }
 }
